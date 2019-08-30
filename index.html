@@ -1,71 +1,8 @@
 <!DOCTYPE html>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Livvic:100&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
-    body {
-        background: #222;
-        margin: 0;
-    }
-    .header {
-        padding: 20px;
-        text-align: center;
-        background: linear-gradient(to bottom right, red, purple);
-        color: white;
-        font-family: 'Livvic', sans-serif;
-        
-        text-shadow: 2px 2px #222;
-    }
-    
-    #buttonsdiv {
-        
-    }
 
-    button {
-        background: linear-gradient(to bottom right, red, purple);
-        padding: 10px;
-        margin: 10px;
-        border-radius: 1em;
-        color: #222;
-        box-shadow: 3px 3px rgb(46, 0, 46);
-        font-family: 'Lexend Deca', sans-serif;
-        font-size: 15px;
-        border: 2px inset;
-        border-color: rgb(194, 2, 2) rgb(78, 0, 78) rgb(78, 0, 78) rgb(194, 2, 2);
-        
-    }
-
-    button:hover {
-        transform: scale(1.1);
-    }
-    .container {
-        display: grid;
-        grid-gap: 0px 0px;
-        justify-items: stretch;
-        align-items: stretch;
-        justify-content: stretch; 
-        align-content: stretch;
-        width: 600px;
-        height: 600px;
-        margin: 30px auto 0 auto;
-        padding: 1rem;
-        position: relative;
-        background: linear-gradient(to right, red, purple);
-        padding: 3px;
-    }
-
-    .childsblack {
-        justify-self: stretch;
-        align-self: stretch;
-        background-color: black;
-    }
-    .childs {
-        justify-self: stretch;
-        align-self: stretch;
-        background-color: #D8D3D3;
-    }
-</style>
 <head>
     <title>My Etch a Sketch project - By Bauer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -73,46 +10,20 @@
     <div class="header">
         <h1 id="title">Etch-a-Sketch !</h1>
         <div id="buttonsdiv">
-            <button id="reset">Reset pad</button>
-            <button id="changesize">Change Dot Size</button>
-            <button id="change style">Change Style</button>
+            <button id="reset" onclick="resetGrid()">Reset pad</button>
+            <button id="changesize" onclick="changeSize()">Change Pixel Size</button>
+            <div class="dropdown">
+                <p id="changestyledropdown">Change Style<i class="arrow-down"></i></button>
+                <ul class="dropdown-content" id="buttonshover">
+                    <li id="randomcolors"><a href="#">Random Colors</a></li>
+                    <li id="divider"></li>
+                    <li id="blackoverlay"><a href="#">Black Gradient</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div id="sketch" class="container">
         
     </div>
 </body>
-<script>
-    const gridProperties = document.getElementById("sketch");
-    const grid = document.querySelector(".container");
-    let gridSizeRows = gridProperties.offsetHeight;
-    let gridSizeColumns = gridProperties.offsetWidth;
-    let gridSizeDot = 20;
-    grid.style["grid-template-rows"] = gridSizeDot + "px";
-    grid.style["grid-template-columns"] = gridSizeDot + "px";
-
-    console.log(gridSizeDot);
-    console.log(gridSizeColumns);
-    const toAdd = document.createDocumentFragment();
-    function createDivs(){
-        for (let i = 1; i < gridSizeRows/gridSizeDot; i++) {
-            for (let j = 1; j < gridSizeColumns/gridSizeDot; j++) {
-                let newDiv = document.createElement('div');
-                newDiv.className = "childs";
-                newDiv.id = "dot" + i + "-" + j;
-                newDiv.style.gridRowStart = i;
-                newDiv.style.gridRowEnd = i;
-                newDiv.style.gridColumnStart = j;
-                newDiv.style.gridColumnEnd = j;
-                newDiv.addEventListener('mouseover', (e) => {
-                    newDiv.classList.add("childsblack");
-                    newDiv.classList.remove("childs");
-                    
-                });
-                toAdd.appendChild(newDiv);
-            };
-        };
-        grid.append(toAdd);
-    };
-    createDivs();
-</script>
+<script src="script.js"></script>

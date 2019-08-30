@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic:100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+body {
+    background: #222;
+    margin: 0;
+}
+.header {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom right, red, purple);
+    color: white;
+    font-family: 'Livvic', sans-serif;
+    margin: 20px;
+    text-shadow: 2px 2px #222;
+}
+
+
+
+button, p {
+    background: linear-gradient(to bottom right, red, purple);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 1em;
+    color: #222;
+    box-shadow: 3px 3px rgb(46, 0, 46);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    border: 2px inset;
+    border-color: rgb(194, 2, 2) rgb(78, 0, 78) rgb(78, 0, 78) rgb(194, 2, 2);
+    outline: none;
+}
+
+#changestyledropdown {
+    text-shadow: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+button:hover, p:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button:active {
+    background: linear-gradient(to bottom right, rgb(194, 2, 2), rgb(78, 0, 78));
+}
+
+#buttonshover:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+i {
+    border: solid #222;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px;
+}
+
+.arrow-down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    list-style: none;
+    background: linear-gradient(to bottom right, red, purple);
+    display: none;
+    position: absolute;
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 1em;
+    color: #222;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    border: 2px inset;
+    border-color: rgb(194, 2, 2) rgb(78, 0, 78) rgb(78, 0, 78) rgb(194, 2, 2);
+    min-width: 96.484px;
+    z-index: 1;
+    text-shadow: none;    
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(61, 61, 61);
+}
+
+.container {
+    display: grid;
+    grid-gap: 0px 0px;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: stretch; 
+    align-content: stretch;
+    width: 600px;
+    height: 600px;
+    margin: 30px auto 0 auto;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+}
+
+
+.childs {
+    justify-self: stretch;
+    align-self: stretch;
+    background-color: #D8D3D3;
+}
+.childsblack {
+    justify-self: stretch;
+    align-self: stretch;
+    background-color: black;
+}
