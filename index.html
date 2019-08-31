@@ -10,14 +10,17 @@
     <div class="header">
         <h1 id="title">Etch-a-Sketch !</h1>
         <div id="buttonsdiv">
+            <button id="default" onclick="backToDefaults()">Back to Default</button>
             <button id="reset" onclick="resetGrid()">Reset pad</button>
             <button id="changesize" onclick="changeSize()">Change Pixel Size</button>
             <div class="dropdown">
                 <p id="changestyledropdown">Change Style<i class="arrow-down"></i></button>
                 <ul class="dropdown-content" id="buttonshover">
+                    <li id="justblack"><a href="#">Just Black</a></li>
+                    <li class="divider"></li>
                     <li id="randomcolors"><a href="#">Random Colors</a></li>
-                    <li id="divider"></li>
-                    <li id="blackoverlay"><a href="#">Black Gradient</a></li>
+                    <li class="divider"></li>
+                    <li id="gradualblack"><a href="#">Gradual Black</a></li>
                 </ul>
             </div>
         </div>
