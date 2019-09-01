@@ -13,20 +13,23 @@
             <button id="default" onclick="backToDefaults()">Back to Default</button>
             <button id="reset" onclick="resetGrid()">Reset pad</button>
             <button id="changesize" onclick="changeSize()">Change Pixel Size</button>
-            <div class="dropdown">
-                <p id="changestyledropdown">Change Style<i class="arrow-down"></i></button>
-                <ul class="dropdown-content" id="buttonshover">
-                    <li id="justblack"><a href="#">Just Black</a></li>
-                    <li class="divider"></li>
-                    <li id="randomcolors"><a href="#">Random Colors</a></li>
-                    <li class="divider"></li>
-                    <li id="gradualblack"><a href="#">Gradual Black</a></li>
-                </ul>
-            </div>
         </div>
     </div>
-    <div id="sketch" class="container">
+    <div><div id="sketch" class="container">
         
     </div>
+    <div id="stylechoice">
+        <p id="changepixelstyle">Change Pixel Style:                       </p>
+        <form action="">
+            <input type="radio" id="style1" name="dotstyle" value="justblack" checked><label for="style1">Just Black</label>
+            <input type="radio" id="style2" name="dotstyle" value="gradualblack"><label for="style2">Gradual Black</label>
+            <input type="radio" id="style3" name="dotstyle" value="randomcolors"><label for="style3">Random Colors</label>
+        </form>
+    </div>
+    </div>
+
+    <footer>
+        <span>Designed by Carlos "Bauer" Rocha. 2019</span>
+    </footer>
 </body>
 <script src="script.js"></script>

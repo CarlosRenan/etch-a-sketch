@@ -10,6 +10,7 @@ function backToDefaults() {
     size = 20;
     resetGrid();
     createDivs(gridSizeRows, gridSizeColumns, size);
+    document.getElementById("style1").checked = true; 
 };
 
 function resetGrid() {

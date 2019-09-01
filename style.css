@@ -6,17 +6,20 @@ body {
     margin: 0;
 }
 .header {
-    padding: 20px;
+    height: 130px;
+    padding: 5px;
     text-align: center;
     background: linear-gradient(to bottom right, red, purple);
     color: white;
     font-family: 'Livvic', sans-serif;
-    margin: 20px;
+    margin-bottom: 15px;
     text-shadow: 2px 2px #222;
 }
 
-
-button, p {
+h1 {
+    margin: 5px;
+}
+button {
     background: linear-gradient(to bottom right, red, purple);
     padding: 10px;
     margin: 10px;
@@ -30,6 +33,57 @@ button, p {
     outline: none;
 }
 
+input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+input[type="radio"]:checked + label{
+    background: linear-gradient(to bottom right, red, purple);
+    padding: 10px;
+    margin-top: 0;
+    margin-left: 0;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    color: #222;
+    box-shadow: 3px 3px rgb(46, 0, 46);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    border: 2px inset;
+    border-color: rgb(194, 2, 2) rgb(78, 0, 78) rgb(78, 0, 78) rgb(194, 2, 2);
+  }
+
+label {
+    display: table-cell;
+    padding: 10px;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, rgb(114, 2, 2), rgb(48, 0, 48));
+    color: rgb(68, 68, 68);
+    border-radius: 3px;
+    border: 2px inset;
+    border-color: rgb(114, 2, 2) rgb(48, 0, 48) rgb(48, 0, 48) rgb(114, 2, 2);
+    box-shadow: 3px 3px rgb(46, 0, 46);
+    font-family: 'Lexend Deca', sans-serif;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+}
+p {
+    background: linear-gradient(to bottom right, red, purple);
+    padding: 10px;
+    margin: 0px;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    color: #222;
+    box-shadow: 3px 3px rgb(46, 0, 46);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    border: 2px inset;
+    border-color: rgb(194, 2, 2) rgb(78, 0, 78) rgb(78, 0, 78) rgb(194, 2, 2);
+}
 #changestyledropdown {
     text-shadow: none;
 }
@@ -38,7 +92,7 @@ a {
     text-decoration: none;
     color: #222;
 }
-button:hover, p:hover {
+button:hover, input:hover, label:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -52,52 +106,17 @@ button:active {
     cursor: pointer;
 }
 
-i {
-    border: solid #222;
-    border-width: 0 3px 3px 0;
+#stylechoice {
     display: inline-block;
-    padding: 3px;
-    margin: 3px;
-}
-
-.arrow-down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-.dropdown {
+    vertical-align: left;
+    margin: 0;
+    padding: 0;
     position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    list-style: none;
-    background: linear-gradient(to bottom right, red, purple);
-    display: none;
-    position: absolute;
-    padding: 10px;
-    margin: 0px 10px 10px 10px;
-    border-radius: 1em;
-    color: #222;
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 15px;
-    border: 2px inset;
-    border-color: rgb(194, 2, 2) rgb(78, 0, 78) rgb(78, 0, 78) rgb(194, 2, 2);
-    min-width: 96.484px;
-    z-index: 1;
-    text-shadow: none;    
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.divider {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid rgb(61, 61, 61);
 }
 
 .container {
     display: grid;
+    float: left;
     grid-gap: 0px 0px;
     justify-items: stretch;
     align-items: stretch;
@@ -105,8 +124,7 @@ i {
     align-content: stretch;
     width: 600px;
     height: 600px;
-    margin: 30px auto 0 auto;
-    padding: 1rem;
+    margin: 0 auto 20px 25%;
     position: relative;
     background: linear-gradient(to right, red, purple);
     padding: 3px;
@@ -122,4 +140,22 @@ i {
     justify-self: stretch;
     align-self: stretch;
     background-color: black;
+}
+
+footer {
+    padding: 15px;
+    text-align: right;
+    clear: both;
+    position: relative;
+    height: 30px;
+    margin-top: 15px;
+    background: linear-gradient(to bottom right, red, purple);
+}
+
+span {
+    line-height: 30px;
+    padding: 10px;
+    margin: 10px;
+    color: #222;
+    font-family: 'Lexend Deca', sans-serif;
 }
