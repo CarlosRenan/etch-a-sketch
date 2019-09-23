@@ -124,22 +124,37 @@ button:active {
     align-content: stretch;
     width: 600px;
     height: 600px;
-    margin: 0 auto 20px 25%;
+    margin: 0 auto 20px 0;
     position: relative;
-    background: linear-gradient(to right, red, purple);
-    padding: 3px;
+    background: rgba(255, 255, 255, 1);
 }
 
+#border {
+    display: grid;
+    float: left;
+    grid-gap: 0px 0px;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: stretch; 
+    align-content: stretch;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto 20px 25%;
+    position: relative;
+    background:linear-gradient(to bottom right, red, purple);
+    padding: 3px;
+}
 
 .childs {
     justify-self: stretch;
     align-self: stretch;
-    background-color: #D8D3D3;
+    opacity: 1;
 }
-.childsblack {
+
+.childsop {
     justify-self: stretch;
     align-self: stretch;
-    background-color: black;
+    opacity: 0.1;
 }
 
 footer {

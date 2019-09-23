@@ -15,15 +15,17 @@
             <button id="changesize" onclick="changeSize()">Change Pixel Size</button>
         </div>
     </div>
-    <div><div id="sketch" class="container">
+    <div>
+        <div id="border"><div id="sketch" class="container">
         
+    </div>
     </div>
     <div id="stylechoice">
         <p id="changepixelstyle">Change Pixel Style:                       </p>
         <form action="">
-            <input type="radio" id="style1" name="dotstyle" value="justblack" checked><label for="style1">Just Black</label>
-            <input type="radio" id="style2" name="dotstyle" value="gradualblack"><label for="style2">Gradual Black</label>
-            <input type="radio" id="style3" name="dotstyle" value="randomcolors"><label for="style3">Random Colors</label>
+            <input type="radio" id="style1" name="dotstyle" value="justblack" checked><label for="style1" onclick="justBlack(gridSizeRows, gridSizeColumns, size)">Just Black</label>
+            <input type="radio" id="style2" name="dotstyle" value="gradualblack"><label for="style2" onclick="gradualBlack(gridSizeRows, gridSizeColumns, size)">Gradual Black</label>
+            <input type="radio" id="style3" name="dotstyle" value="randomcolors"><label for="style3" onclick="randomColors(gridSizeRows, gridSizeColumns, size)">Random Colors</label>
         </form>
     </div>
     </div>
